@@ -1,0 +1,4 @@
+LDA 8000H  
+CMA           
+STA 8001H
+HLT
