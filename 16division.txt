@@ -1,0 +1,15 @@
+LDA 8500   
+MOV B,A
+LDA 8501      
+MOV D,A
+MOV A,B
+MVI C,00      
+LOOP: CMP D
+      JC DONE
+      SUB D
+      INR C
+      JMP LOOP
+DONE: STA 8503    
+      MOV A,C
+      STA 8502   
+      HLT
